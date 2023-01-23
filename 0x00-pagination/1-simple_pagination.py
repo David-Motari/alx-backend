@@ -33,7 +33,7 @@ class Server:
 
         rnge: Tuple = index_range(page, page_size)
         self.dataset()
-        return self.__dataset[rnge[0] : rnge[1]]
+        return self.__dataset[rnge[0]:rnge[1]]
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
