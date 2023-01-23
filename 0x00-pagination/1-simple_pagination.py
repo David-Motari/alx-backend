@@ -31,9 +31,9 @@ class Server:
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
 
-        rnge: Tuple = index_range(page, page_size)
-        self.dataset()
-        return self.__dataset[rnge[0]:rnge[1]]
+        range: Tuple = index_range(page, page_size)
+        pgnated_list: List = self.dataset()
+        return (pgnated_list[range[0]:range[1]])
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
