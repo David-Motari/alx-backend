@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 1-fifo_cache
 """
@@ -33,6 +33,4 @@ class FIFOCache(BaseCaching):
         """
         return the value in self.cache_data linked to key
         """
-        if key in self.cache_data:
-            return self.cache_data[key]
-        return None
+        return self.cache_data.get(key)
