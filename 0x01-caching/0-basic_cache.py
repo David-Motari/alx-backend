@@ -14,7 +14,7 @@ class BasicCache(BaseCaching):
         """
         assign to the dictionary self.cache_data the item value for the key 'key'
         """
-        if key == None or item == None:
+        if key or item is None:
             pass
         self.cache_data[key] = item
 
