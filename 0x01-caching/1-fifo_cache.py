@@ -24,7 +24,7 @@ class FIFOCache(BaseCaching):
             pass
         else:
             self.cache_data[key] = item
-        if len(self.cache_data) > BaseCaching.MAX_ITEMS:
+        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             del_item = sorted(self.cache_data)[0]
             self.cache_data.pop(del_item)
             print("DISCARD: {}".format(del_item))
