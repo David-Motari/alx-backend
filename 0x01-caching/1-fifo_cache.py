@@ -20,11 +20,9 @@ class FIFOCache(BaseCaching):
         """
         assign to the dictionary self.cache_data the item value for the key
         """
-        if key is None and item is None:
-            pass
-        else:
+        if key is not None and item is not None:
             self.cache_data[key] = item
-        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
+        if len(self.cache_data) > BaseCaching.MAX_ITEMS:
             del_item = sorted(self.cache_data)[0]
             self.cache_data.pop(del_item)
             print("DISCARD: {}".format(del_item))
