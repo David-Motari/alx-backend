@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 0-basic_cache
 """
 from base_caching import BaseCaching
@@ -12,7 +12,7 @@ class BasicCache(BaseCaching):
 
     def put(self, key, item):
         """
-        assign to the dictionary self.cache_data the item value for the key 'key'
+        assign to the dictionary self.cache_data the item value for the key
         """
         if key is None or item is None:
             pass
