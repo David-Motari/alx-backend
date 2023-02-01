@@ -8,7 +8,6 @@ from flask_babel import Babel
 from os import getenv
 
 
-
 class Config(object):
     """
     configuration of available languages in the app
